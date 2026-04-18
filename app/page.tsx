@@ -1,101 +1,80 @@
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { pickRandom } from "@/lib/gallery";
+
+const navLinks = [
+  { href: "/flash",   label: "flash",   zone: { tMin: 10, tMax: 32, lMin: 5,  lMax: 60 } },
+  { href: "/shop",    label: "shop",    zone: { tMin: 38, tMax: 60, lMin: 18, lMax: 65 } },
+  { href: "/booking", label: "booking", zone: { tMin: 66, tMax: 84, lMin: 8,  lMax: 58 } },
+];
+
+// 3色を必ずシャッフルして重複なしで割り当て
+const DOT_COLORS = ["#ff4444", "#4488ff", "#44cc77"];
+function shuffleColors(): string[] {
+  return [...DOT_COLORS].sort(() => Math.random() - 0.5);
+}
+
+function rand(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+interface LinkState { top: string; left: string; color: string }
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [bg, setBg]       = useState("");
+  const [links, setLinks] = useState<LinkState[]>([]);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  useEffect(() => {
+    setBg(pickRandom());
+    const colors = shuffleColors();
+    setLinks(
+      navLinks.map(({ zone: { tMin, tMax, lMin, lMax } }, i) => ({
+        top:   `${rand(tMin, tMax)}%`,
+        left:  `${rand(lMin, lMax)}%`,
+        color: colors[i],
+      }))
+    );
+  }, []);
+
+  return (
+    <main className="relative w-full h-screen overflow-hidden">
+      {bg && (
+        <Image src={bg} alt="" fill className="object-cover" priority sizes="100vw" />
+      )}
+
+      {links.length > 0 &&
+        navLinks.map(({ href, label }, i) => (
+          <Link
+            key={href}
+            href={href}
+            className="absolute text-white select-none flex items-center gap-2"
+            style={{
+              top:           links[i].top,
+              left:          links[i].left,
+              fontSize:      "clamp(1.4rem, 4vw, 2.2rem)",
+              fontFamily:    "'Courier New', Courier, monospace",
+              letterSpacing: "0.05em",
+              textShadow:    "0 1px 10px rgba(0,0,0,0.5)",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            {/* 発光ドット */}
+            <span
+              style={{
+                display:      "inline-block",
+                width:        "7px",
+                height:       "7px",
+                borderRadius: "50%",
+                background:   links[i].color,
+                flexShrink:   0,
+                boxShadow:    `0 0 6px 3px ${links[i].color}`,
+              }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            {label}
+          </Link>
+        ))}
+    </main>
   );
 }

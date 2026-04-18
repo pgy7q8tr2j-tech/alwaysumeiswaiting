@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        ink: "#0f1424",
+        moss: "#2d5a4a",
+        paper: "#e8e4dc",
+      },
+      fontFamily: {
+        sans: ["'Courier New'", "Courier", "monospace"],
+        mono: ["'Courier New'", "Courier", "monospace"],
       },
     },
   },
