@@ -15,11 +15,17 @@ export default function PhotoBackground({ children, overlay = 0, className = "" 
 
   return (
     <div className={`relative min-h-screen ${className}`}>
-      {/* Background photo */}
+      {/* Background photo — fixed on desktop, absolute on iOS to prevent scroll-zoom */}
       {image && (
         <div
           className="fixed inset-0 -z-10 transition-opacity duration-700"
-          style={{ opacity: image ? 1 : 0 }}
+          style={{
+            opacity: image ? 1 : 0,
+            // iOS Safari: prevent the viewport-resize zoom when browser bar hides
+            height: "100dvh",
+            WebkitBackfaceVisibility: "hidden",
+            backfaceVisibility: "hidden",
+          }}
         >
           <Image
             src={image}
@@ -28,6 +34,7 @@ export default function PhotoBackground({ children, overlay = 0, className = "" 
             className="object-cover"
             priority
             sizes="100vw"
+            style={{ WebkitBackfaceVisibility: "hidden" }}
           />
           {overlay > 0 && (
             <div

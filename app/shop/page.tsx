@@ -25,9 +25,6 @@ export default function ShopPage() {
       <HomeButton />
       <div className="min-h-screen px-14 pt-20 pb-28 md:px-20 lg:px-28">
 
-        <div className="fixed top-6 right-6 z-40">
-          <span className="text-white text-sm" style={ts}>shop</span>
-        </div>
 
         <p className="text-white text-xs leading-loose mb-14" style={ts}>
           original paintings and prints.<br />

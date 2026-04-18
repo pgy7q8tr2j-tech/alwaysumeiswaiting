@@ -20,9 +20,6 @@ export default function BookingPage() {
       <HomeButton />
       <div className="min-h-screen px-7 pt-20 pb-24 md:px-14">
 
-        <div className="fixed top-6 right-6 z-40">
-          <span className="text-white text-sm" style={ts}>booking</span>
-        </div>
 
         {/* Steps */}
         <div className="flex flex-col gap-9 mb-16 max-w-sm">

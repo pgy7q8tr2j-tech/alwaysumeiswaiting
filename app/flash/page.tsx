@@ -84,11 +84,6 @@ export default function FlashPage() {
       <HomeButton />
       <div className="min-h-screen px-14 pt-20 pb-28 md:px-20 lg:px-28">
 
-        {/* ページ名 — 右上固定 */}
-        <div className="fixed top-6 right-6 z-40">
-          <span className="text-white text-sm" style={ts}>flash</span>
-        </div>
-
         <p className="text-white text-xs leading-loose mb-14" style={ts}>
           deposit payment confirms your booking.<br />
           contact via instagram dm for scheduling.
