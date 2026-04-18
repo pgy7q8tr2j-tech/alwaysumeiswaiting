@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative w-full h-screen overflow-hidden">
+    <main style={{ position: "fixed", inset: 0, overflow: "hidden" }}>
       {bg && (
         <Image src={bg} alt="" fill className="object-cover" priority sizes="100vw" />
       )}
