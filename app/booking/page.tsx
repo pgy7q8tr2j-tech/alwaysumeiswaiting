@@ -49,7 +49,7 @@ export default function BookingPage() {
                 <p className="text-white text-[11px] leading-relaxed" style={ts}>
                   {step.desc}
                 </p>
-                <p className="text-white text-[10px] leading-relaxed mt-1" style={{ ...ts, opacity: 0.65 }}>
+                <p className="text-white text-[10px] leading-relaxed mt-1" style={ts}>
                   {step.en}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function BookingPage() {
           <BookingDepositButton />
         </div>
 
-        <p className="mt-8 text-white text-[10px] leading-loose max-w-sm" style={{ ...ts, opacity: 0.7 }}>
+        <p className="mt-8 text-white text-[10px] leading-loose max-w-sm" style={{ ...ts, opacity: 0.85 }}>
           ※ 予約金はキャンセルの場合、返金いたしません。<br />
           ※ 施術代金から予約金を差し引いた金額を当日お支払いください。<br />
           <br />
