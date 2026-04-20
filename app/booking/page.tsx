@@ -78,9 +78,12 @@ export default function BookingPage() {
           <BookingDepositButton />
         </div>
 
-        <p className="mt-8 text-white text-[10px] leading-loose max-w-sm" style={ts}>
+        <p className="mt-8 text-white text-[10px] leading-loose max-w-sm" style={{ ...ts, opacity: 0.7 }}>
           ※ 予約金はキャンセルの場合、返金いたしません。<br />
-          ※ 施術代金から予約金を差し引いた金額を当日お支払いください。
+          ※ 施術代金から予約金を差し引いた金額を当日お支払いください。<br />
+          <br />
+          * deposit is non-refundable.<br />
+          * remaining balance due on the day of your appointment.
         </p>
 
         <a

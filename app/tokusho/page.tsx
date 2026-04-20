@@ -7,7 +7,7 @@ const mono = { fontFamily: "'Courier New', Courier, monospace" };
 const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.6)" };
 
 const items = [
-  { label: "販売業者",           value: "TAI（屋号: alwaysumeiswaiting）" },
+  { label: "販売業者",           value: "TAI（屋号: cn1046hb9an0o42）" },
   { label: "運営責任者",         value: "TAI" },
   { label: "所在地",             value: "東京都　※詳細はお問い合わせください" },
   { label: "電話番号",           value: "※お問い合わせはInstagram DMにてお願いします" },

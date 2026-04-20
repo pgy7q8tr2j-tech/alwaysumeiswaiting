@@ -10,30 +10,32 @@ interface Props {
 }
 
 export default function Lightbox({ src, alt, onClose }: Props) {
-  // Escキーで閉じる
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     window.addEventListener("keydown", handler);
-    // スクロール禁止
-    document.body.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", handler);
-      document.body.style.overflow = "";
     };
   }, [onClose]);
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{ background: "rgba(0,0,0,0.88)" }}
       onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        background: "rgba(0,0,0,0.92)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
-      {/* 画像コンテナ — クリックで閉じないよう伝播を止める */}
+      {/* 画像コンテナ */}
       <div
-        className="relative"
-        style={{ width: "min(88vw, 88vh)", height: "min(88vw, 88vh)" }}
+        style={{ width: "min(88vw, 88vh)", height: "min(88vw, 88vh)", position: "relative" }}
         onClick={(e) => e.stopPropagation()}
       >
         <Image
@@ -46,16 +48,6 @@ export default function Lightbox({ src, alt, onClose }: Props) {
         />
       </div>
 
-      {/* ヒント */}
-      <p
-        className="absolute bottom-6 text-white text-xs"
-        style={{
-          fontFamily: "'Courier New', Courier, monospace",
-          opacity: 0.3,
-        }}
-      >
-        click anywhere or esc to close
-      </p>
     </div>
   );
 }
