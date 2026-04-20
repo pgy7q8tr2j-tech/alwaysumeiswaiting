@@ -8,10 +8,26 @@ const mono = { fontFamily: "'Courier New', Courier, monospace" };
 const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.7)" };
 
 const steps = [
-  { num: "01", title: "instagram dm",    desc: "希望のデザイン・部位・サイズをDMでお知らせください。" },
-  { num: "02", title: "デザイン相談",      desc: "DMにてデザインの詳細を詰めます。flash / customどちらでも対応します。" },
-  { num: "03", title: "日程確定",          desc: "空き状況を確認のうえ、施術日程を確定します。" },
-  { num: "04", title: "deposit payment", desc: "日程確定後、下の決済リンクから予約金をお支払いください。お支払いをもって予約確定となります。" },
+  {
+    num: "01", title: "instagram dm",
+    desc: "希望のデザイン・部位・サイズをDMでお知らせください。",
+    en: "please send your desired design, placement, and size via dm.",
+  },
+  {
+    num: "02", title: "デザイン相談  /  design consultation",
+    desc: "DMにてデザインの詳細を詰めます。flash / customどちらでも対応します。",
+    en: "we'll discuss the details via dm. both flash and custom designs available.",
+  },
+  {
+    num: "03", title: "日程確定  /  scheduling",
+    desc: "空き状況を確認のうえ、施術日程を確定します。",
+    en: "we'll confirm the appointment date based on availability.",
+  },
+  {
+    num: "04", title: "deposit payment",
+    desc: "日程確定後、下の決済リンクから予約金をお支払いください。お支払いをもって予約確定となります。",
+    en: "after scheduling, please pay the deposit via the link below. booking is confirmed upon payment.",
+  },
 ];
 
 export default function BookingPage() {
@@ -32,6 +48,9 @@ export default function BookingPage() {
                 <h2 className="text-white text-xs mb-2" style={ts}>{step.title}</h2>
                 <p className="text-white text-[11px] leading-relaxed" style={ts}>
                   {step.desc}
+                </p>
+                <p className="text-white text-[10px] leading-relaxed mt-1" style={{ ...ts, opacity: 0.65 }}>
+                  {step.en}
                 </p>
               </div>
             </div>
@@ -63,6 +82,14 @@ export default function BookingPage() {
           ※ 予約金はキャンセルの場合、返金いたしません。<br />
           ※ 施術代金から予約金を差し引いた金額を当日お支払いください。
         </p>
+
+        <a
+          href="/tokusho"
+          className="mt-6 inline-block text-white text-[10px] underline underline-offset-2"
+          style={{ ...ts, opacity: 0.5 }}
+        >
+          特定商取引法に基づく表記
+        </a>
       </div>
     </PhotoBackground>
   );

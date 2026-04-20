@@ -46,22 +46,6 @@ export default function Lightbox({ src, alt, onClose }: Props) {
         />
       </div>
 
-      {/* 閉じるボタン */}
-      <button
-        onClick={onClose}
-        className="absolute top-6 right-8 text-white text-2xl leading-none"
-        style={{
-          fontFamily: "'Courier New', Courier, monospace",
-          opacity: 0.7,
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-        }}
-        aria-label="close"
-      >
-        ×
-      </button>
-
       {/* ヒント */}
       <p
         className="absolute bottom-6 text-white text-xs"
