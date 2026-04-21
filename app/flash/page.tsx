@@ -48,7 +48,6 @@ const flashItems: {
   { id: "flash-27",  src: "/images/works/flash/flash-27.jpg",  title: "Symbol of layers of time and space",               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-28",  src: "/images/works/flash/flash-28.jpg",  title: "Symbol of the type of space-time",                 price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-29",  src: "/images/works/flash/flash-29.jpg",  title: "Symbol of the type of space-time",                 price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-30",  src: "/images/works/flash/flash-30.jpg",  title: "The Relationship Between Everyday Life and Dogs",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-31",  src: "/images/works/flash/flash-31.jpg",  title: "hug",                                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-32",  src: "/images/works/flash/flash-32.jpg",  title: "✌🏻に侵入に侵入",                                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-33",  src: "/images/works/flash/flash-33.jpg",  title: "✌🏻の夢",                                           price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
@@ -60,7 +59,6 @@ const flashItems: {
   { id: "flash-39",  src: "/images/works/flash/flash-39.jpg",  title: "浮かぶ数字",                                        price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-40",  src: "/images/works/flash/flash-40.jpg",  title: "祈り",                                             price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-41",  src: "/images/works/flash/flash-41.jpg",  title: "祈り",                                             price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-42",  src: "/images/works/flash/flash-42.jpg",  title: "蔓",                                               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-43",  src: "/images/works/flash/flash-43.jpg",  title: "蔓",                                               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
