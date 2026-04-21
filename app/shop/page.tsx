@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import PhotoBackground from "@/components/PhotoBackground";
-import ShopCheckoutButton from "@/components/ShopCheckoutButton";
 import Lightbox from "@/components/Lightbox";
 import HomeButton from "@/components/HomeButton";
 
@@ -15,11 +14,10 @@ const shopItems = [
   { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。", year: "2024", medium: "", size: "", price: 40000, inStock: true, priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp" },
 ];
 
-export default function ShopPage() {
-  const [lightbox,  setLightbox]  = useState<{ src: string; alt: string } | null>(null);
-  const [expanded,  setExpanded]  = useState<string | null>(null);
+type ShopItem = (typeof shopItems)[number];
 
-  const toggle = (id: string) => setExpanded(prev => prev === id ? null : id);
+export default function ShopPage() {
+  const [selected, setSelected] = useState<ShopItem | null>(null);
 
   return (
     <PhotoBackground overlay={18}>
@@ -36,9 +34,9 @@ export default function ShopPage() {
           {shopItems.map((item) => (
             <div key={item.id} className="flex flex-col gap-2">
 
-              {/* 画像：クリックで拡大 */}
+              {/* 画像：クリックで詳細 Lightbox */}
               <button
-                onClick={() => setLightbox({ src: item.src, alt: item.title })}
+                onClick={() => setSelected(item)}
                 className="relative w-full overflow-hidden bg-white/10 cursor-zoom-in block"
                 style={{ border: "none", padding: 0 }}
               >
@@ -57,48 +55,10 @@ export default function ShopPage() {
                 )}
               </button>
 
-              {/* Info */}
-              <div className="flex flex-col gap-1" style={ts}>
-                {/* タイトル・価格 */}
-                <div className="flex items-start justify-between gap-2">
-                  <span className="text-white text-xs leading-snug">{item.title}</span>
-                  <span className="text-white text-xs shrink-0">¥{item.price.toLocaleString()}</span>
-                </div>
-
-                {/* purchase トグルボタン */}
-                {item.inStock && (
-                  <div className="mt-1 flex flex-col gap-2">
-                    <button
-                      onClick={() => toggle(item.id)}
-                      className="w-full h-10 border text-xs transition-opacity duration-300 hover:opacity-60"
-                      style={{
-                        borderColor: "rgba(255,255,255,0.7)",
-                        color: "rgba(255,255,255,0.85)",
-                        background: "none",
-                        cursor: "pointer",
-                        ...mono,
-                      }}
-                    >
-                      {expanded === item.id ? "close" : "purchase"}
-                    </button>
-
-                    {/* 展開：詳細 + 購入ボタン */}
-                    {expanded === item.id && (
-                      <div className="flex flex-col gap-2 pt-1">
-                        {(item.medium || item.size || item.year) && (
-                          <p className="text-white text-[10px] leading-relaxed">
-                            {[item.medium, item.size, item.year].filter(Boolean).join("  /  ")}
-                          </p>
-                        )}
-                        <ShopCheckoutButton priceId={item.priceId} label="buy now" />
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {!item.inStock && (
-                  <span className="text-white text-[10px] mt-1" style={ts}>sold out</span>
-                )}
+              {/* タイトル・価格 */}
+              <div className="flex items-start justify-between gap-2" style={ts}>
+                <span className="text-white text-xs leading-snug">{item.title}</span>
+                <span className="text-white text-xs shrink-0">¥{item.price.toLocaleString()}</span>
               </div>
 
             </div>
@@ -106,12 +66,19 @@ export default function ShopPage() {
         </div>
       </div>
 
-      {/* Lightbox */}
-      {lightbox && (
+      {/* Lightbox（詳細 + 購入ボタン） */}
+      {selected && (
         <Lightbox
-          src={lightbox.src}
-          alt={lightbox.alt}
-          onClose={() => setLightbox(null)}
+          src={selected.src}
+          alt={selected.title}
+          onClose={() => setSelected(null)}
+          title={selected.title}
+          price={selected.price}
+          medium={selected.medium}
+          size={selected.size}
+          year={selected.year}
+          priceId={selected.priceId}
+          inStock={selected.inStock}
         />
       )}
     </PhotoBackground>
