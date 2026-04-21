@@ -37,14 +37,15 @@ export default function ShopPage() {
               <button
                 onClick={() => setLightbox({ src: item.src, alt: item.title })}
                 className="relative w-full overflow-hidden bg-white/10 cursor-zoom-in block"
-                style={{ aspectRatio: "4 / 5", border: "none", padding: 0 }}
+                style={{ border: "none", padding: 0 }}
               >
                 <Image
                   src={item.src}
                   alt={item.title}
-                  fill
-                  className="object-cover transition-opacity duration-300 hover:opacity-80"
+                  width={0}
+                  height={0}
                   sizes="(max-width: 640px) 40vw, 28vw"
+                  className="w-full h-auto transition-opacity duration-300 hover:opacity-80"
                 />
                 {!item.inStock && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/55">
