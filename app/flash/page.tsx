@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import PhotoBackground from "@/components/PhotoBackground";
-import FlashCheckoutButton from "@/components/FlashCheckoutButton";
+
 import Lightbox from "@/components/Lightbox";
 import HomeButton from "@/components/HomeButton";
 
@@ -131,11 +131,6 @@ export default function FlashPage() {
                   <div className="flex items-center justify-between">
                     <span className="text-white text-[10px]">{item.size}</span>
                     <span className="text-white text-[10px]">{statusLabel[item.availability]}</span>
-                  </div>
-                )}
-                {item.availability === "available" && item.priceId && (
-                  <div className="mt-1">
-                    <FlashCheckoutButton priceId={item.priceId} label="pay deposit" />
                   </div>
                 )}
               </div>
