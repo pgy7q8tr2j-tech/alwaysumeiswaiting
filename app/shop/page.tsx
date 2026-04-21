@@ -56,9 +56,9 @@ export default function ShopPage() {
               </button>
 
               {/* タイトル・価格 */}
-              <div className="flex items-start justify-between gap-2" style={ts}>
+              <div className="flex flex-col gap-0.5" style={ts}>
                 <span className="text-white text-xs leading-snug">{item.title}</span>
-                <span className="text-white text-xs shrink-0">¥{item.price.toLocaleString()}</span>
+                <span className="text-white text-xs">¥{item.price.toLocaleString()}</span>
               </div>
 
             </div>
