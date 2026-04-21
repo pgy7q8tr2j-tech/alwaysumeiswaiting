@@ -8,7 +8,6 @@ export const galleryImages = [
   "/images/gallery/IMG_2003.jpg",
   "/images/gallery/IMG_2196.jpg",
   "/images/gallery/IMG_2714.jpg",
-  "/images/gallery/IMG_2839.jpg",
   "/images/gallery/IMG_3243.jpg",
   "/images/gallery/IMG_3341.jpg",
   "/images/gallery/IMG_3989.jpg",
