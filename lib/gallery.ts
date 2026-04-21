@@ -31,6 +31,8 @@ export const galleryImages = [
   "/images/gallery/IMG_8444.jpg",
   "/images/gallery/IMG_8822.jpg",
   "/images/gallery/IMG_8956.jpg",
+  "/images/gallery/IMG_5137.jpg",
+  "/images/gallery/IMG_5138.jpg",
   "/images/gallery/IMG_9726.jpg",
   "/images/gallery/IMG_9781.jpg",
 ];
