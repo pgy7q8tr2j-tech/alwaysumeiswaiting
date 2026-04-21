@@ -119,10 +119,10 @@ export default function FlashPage() {
 
               {/* Info */}
               <div className="flex flex-col gap-1" style={ts}>
-                <div className="flex items-start justify-between gap-2">
+                <div className="flex flex-col gap-0.5">
                   <span className="text-white text-xs leading-snug">{item.title}</span>
                   {item.price > 0 && (
-                    <span className="text-white text-xs shrink-0">
+                    <span className="text-white text-xs">
                       ¥{item.price.toLocaleString()}
                     </span>
                   )}
