@@ -11,12 +11,8 @@ const mono = { fontFamily: "'Courier New', Courier, monospace" };
 const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.7)" };
 
 const shopItems = [
-  { id: "shop-01", src: "/images/shop/shop-01.jpg", title: "fragment I",          year: "2024", medium: "oil on canvas",       size: "F4  33.3×24.2cm", price: 180000, inStock: true,  priceId: process.env.NEXT_PUBLIC_STRIPE_SHOP_01_PRICE_ID ?? "" },
-  { id: "shop-02", src: "/images/shop/shop-02.jpg", title: "residue",              year: "2023", medium: "acrylic on paper",    size: "A3  29.7×42.0cm", price: 120000, inStock: true,  priceId: process.env.NEXT_PUBLIC_STRIPE_SHOP_02_PRICE_ID ?? "" },
-  { id: "shop-03", src: "/images/shop/shop-03.jpg", title: "fragment I  — print",  year: "2024", medium: "giclée print  ed.10", size: "A3",              price:  25000, inStock: true,  priceId: process.env.NEXT_PUBLIC_STRIPE_SHOP_03_PRICE_ID ?? "" },
-  { id: "shop-04", src: "/images/shop/shop-04.jpg", title: "fragment II — print",  year: "2024", medium: "giclée print  ed.10", size: "A3",              price:  25000, inStock: false, priceId: process.env.NEXT_PUBLIC_STRIPE_SHOP_04_PRICE_ID ?? "" },
-  { id: "shop-05", src: "/images/shop/shop-05.jpg", title: "無題",                  year: "2024", medium: "",                   size: "",                price:  40000, inStock: true,  priceId: process.env.NEXT_PUBLIC_STRIPE_SHOP_05_PRICE_ID ?? "" },
-  { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。",   year: "2024", medium: "",                   size: "",                price:  40000, inStock: true,  priceId: process.env.NEXT_PUBLIC_STRIPE_SHOP_06_PRICE_ID ?? "" },
+  { id: "shop-05", src: "/images/shop/shop-05.jpg", title: "無題（20241126）",      year: "2024", medium: "", size: "", price: 40000, inStock: true, priceId: "price_1TOTkmEXSQUsr48YcC5YeZoM" },
+  { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。", year: "2024", medium: "", size: "", price: 40000, inStock: true, priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp" },
 ];
 
 export default function ShopPage() {
