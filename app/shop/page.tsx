@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PhotoBackground from "@/components/PhotoBackground";
 import Lightbox from "@/components/Lightbox";
 import HomeButton from "@/components/HomeButton";
@@ -19,6 +19,11 @@ type ShopItem = (typeof shopItems)[number];
 
 export default function ShopPage() {
   const [selected, setSelected] = useState<ShopItem | null>(null);
+  const [shuffled, setShuffled] = useState<ShopItem[]>(shopItems);
+
+  useEffect(() => {
+    setShuffled([...shopItems].sort(() => Math.random() - 0.5));
+  }, []);
 
   return (
     <PhotoBackground overlay={18}>
@@ -32,7 +37,7 @@ export default function ShopPage() {
 
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 md:gap-y-16">
-          {shopItems.map((item) => (
+          {shuffled.map((item) => (
             <div key={item.id} className="flex flex-col gap-2">
 
               {/* 画像：クリックで詳細 Lightbox */}
