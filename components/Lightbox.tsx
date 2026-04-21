@@ -50,12 +50,9 @@ export default function Lightbox({ src, alt, onClose, title, price, medium, size
     >
       {hasDetail ? (
         /* ── shop モード：画像 + 詳細 縦並び ── */
-        <div
-          onClick={(e) => e.stopPropagation()}
-          style={{ width: "min(88vw, 480px)", display: "flex", flexDirection: "column", gap: 20 }}
-        >
-          {/* 画像 */}
-          <div style={{ position: "relative", width: "100%" }}>
+        <div style={{ width: "min(88vw, 480px)", display: "flex", flexDirection: "column", gap: 20 }}>
+          {/* 画像：タップで閉じる */}
+          <div onClick={onClose} style={{ cursor: "pointer", width: "100%" }}>
             <Image
               src={src}
               alt={alt}
@@ -67,8 +64,11 @@ export default function Lightbox({ src, alt, onClose, title, price, medium, size
             />
           </div>
 
-          {/* 詳細 */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 8, ...ts }}>
+          {/* 詳細：タップしても閉じない */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{ display: "flex", flexDirection: "column", gap: 8, ...ts }}
+          >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8 }}>
               <span style={{ color: "rgba(255,255,255,0.9)", fontSize: 13 }}>{title}</span>
               {price !== undefined && (
@@ -91,10 +91,9 @@ export default function Lightbox({ src, alt, onClose, title, price, medium, size
           </div>
         </div>
       ) : (
-        /* ── 通常モード：画像のみ ── */
+        /* ── 通常モード：画像のみ（どこをタップしても閉じる） ── */
         <div
           style={{ width: "min(88vw, 88vh)", height: "min(88vw, 88vh)", position: "relative" }}
-          onClick={(e) => e.stopPropagation()}
         >
           <Image
             src={src}
