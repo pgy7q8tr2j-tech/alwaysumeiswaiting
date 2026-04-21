@@ -11,7 +11,8 @@ const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.7)" };
 
 const shopItems = [
   { id: "shop-05", src: "/images/shop/shop-05.jpg", title: "無題（20241126）",    year: "2024", medium: "", size: "", price: 40000, inStock: true, priceId: "price_1TOTkmEXSQUsr48YcC5YeZoM" },
-  { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。", year: "2024", medium: "", size: "", price: 40000, inStock: true, priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp" },
+  { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。",    year: "2024", medium: "",              size: "",                price: 40000, inStock: true, priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp" },
+  { id: "shop-07", src: "/images/shop/shop-07.jpg", title: "ゆっくり歩けば暑くない", year: "2024", medium: "oil on panel", size: "1400×1800mm", price: 15000, inStock: true, priceId: "" },
 ];
 
 type ShopItem = (typeof shopItems)[number];
