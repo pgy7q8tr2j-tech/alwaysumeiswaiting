@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
-    line_items: [{ price: priceId, quantity: 1 }],
+    line_items: [{ price: priceId, quantity: 1, tax_rates: ["txr_1TOtugEXSQUsr48YGVr66y4T"] }],
     success_url: `${origin}/shop?success=1`,
     cancel_url: `${origin}/shop`,
   });
