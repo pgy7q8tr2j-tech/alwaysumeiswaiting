@@ -75,6 +75,23 @@ export default function Home() {
             {label}
           </Link>
         ))}
+
+      {/* 特定商取引法リンク */}
+      <Link
+        href="/tokusho"
+        style={{
+          position:   "absolute",
+          bottom:     "16px",
+          right:      "16px",
+          fontSize:   "10px",
+          fontFamily: "'Courier New', Courier, monospace",
+          color:      "rgba(255,255,255,0.4)",
+          textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+          letterSpacing: "0.03em",
+        }}
+      >
+        特定商取引法に基づく表記
+      </Link>
     </main>
   );
 }
