@@ -43,6 +43,15 @@ export default function TokushoPage() {
             </div>
           ))}
         </div>
+
+        <div className="mt-16 flex flex-col gap-3 border-t border-white/20 pt-8">
+          <a href="/privacy" className="text-white text-[11px] underline underline-offset-2 opacity-70 hover:opacity-100 transition-opacity" style={ts}>
+            プライバシーポリシー
+          </a>
+          <a href="/terms" className="text-white text-[11px] underline underline-offset-2 opacity-70 hover:opacity-100 transition-opacity" style={ts}>
+            利用規約
+          </a>
+        </div>
       </div>
     </PhotoBackground>
   );
