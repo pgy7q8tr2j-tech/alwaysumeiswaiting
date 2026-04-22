@@ -121,7 +121,7 @@ export default function FlashPage() {
                   <span className="text-white text-xs leading-snug">{item.title}</span>
                   {item.price > 0 && (
                     <span className="text-white text-xs">
-                      ¥{item.price.toLocaleString()}
+                      ¥{item.price.toLocaleString()} 〜 +tax
                     </span>
                   )}
                 </div>
