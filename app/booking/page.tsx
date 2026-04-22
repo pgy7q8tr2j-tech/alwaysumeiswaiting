@@ -60,7 +60,7 @@ export default function BookingPage() {
         {/* CTA */}
         <div className="flex flex-col gap-3 max-w-sm">
           <a
-            href="https://www.instagram.com/alwaysumeiswaiting/"
+            href="https://www.instagram.com/cn1046hb9an0o42/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center h-12 border border-white text-white text-xs transition-opacity duration-300 hover:opacity-60"
