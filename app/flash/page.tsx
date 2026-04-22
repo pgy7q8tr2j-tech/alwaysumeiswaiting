@@ -38,10 +38,10 @@ const flashItems: {
   { id: "flash-17",  src: "/images/works/flash/flash-17.jpg",  title: "2人",                                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-18",  src: "/images/works/flash/flash-18.jpg",  title: "2人",                                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-19",  src: "/images/works/flash/flash-19.jpg",  title: "8階の部屋、太陽",                                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-20",  src: "/images/works/flash/flash-20.jpg",  title: "Flower's memory",                                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-20",  src: "/images/works/flash/flash-20.jpg",  title: "Flower's memory",                                  price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-21",  src: "/images/works/flash/flash-21.jpg",  title: "IMG_3566",                                         price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-22",  src: "/images/works/flash/flash-22.jpg",  title: "IMG_3715",                                         price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-23",  src: "/images/works/flash/flash-23.jpg",  title: "IMG_3718",                                         price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-22",  src: "/images/works/flash/flash-22.jpg",  title: "IMG_3715",                                         price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-23",  src: "/images/works/flash/flash-23.jpg",  title: "IMG_3718",                                         price: 20000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-24",  src: "/images/works/flash/flash-24.jpg",  title: "Relationship between space-time and crystals",     price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-25",  src: "/images/works/flash/flash-25.jpg",  title: "Relationship between space-time and darkness",     price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-26",  src: "/images/works/flash/flash-26.jpg",  title: "Summon space and time!",                           price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
@@ -50,16 +50,16 @@ const flashItems: {
   { id: "flash-29",  src: "/images/works/flash/flash-29.jpg",  title: "Symbol of the type of space-time",                 price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-31",  src: "/images/works/flash/flash-31.jpg",  title: "hug",                                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-32",  src: "/images/works/flash/flash-32.jpg",  title: "✌🏻に侵入に侵入",                                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-33",  src: "/images/works/flash/flash-33.jpg",  title: "✌🏻の夢",                                           price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-33",  src: "/images/works/flash/flash-33.jpg",  title: "✌🏻の夢",                                           price: 20000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-34",  src: "/images/works/flash/flash-34.jpg",  title: "ゆっくり歩けば暑くない",                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-35",  src: "/images/works/flash/flash-35.jpg",  title: "忘れられた町",                                       price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-36",  src: "/images/works/flash/flash-36.jpg",  title: "手のひらの58",                                      price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-36",  src: "/images/works/flash/flash-36.jpg",  title: "手のひらの58",                                      price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-37",  src: "/images/works/flash/flash-37.jpg",  title: "村",                                               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-38",  src: "/images/works/flash/flash-38.jpg",  title: "村",                                               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-39",  src: "/images/works/flash/flash-39.jpg",  title: "浮かぶ数字",                                        price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-40",  src: "/images/works/flash/flash-40.jpg",  title: "祈り",                                             price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-41",  src: "/images/works/flash/flash-41.jpg",  title: "祈り",                                             price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-43",  src: "/images/works/flash/flash-43.jpg",  title: "蔓",                                               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-40",  src: "/images/works/flash/flash-40.jpg",  title: "祈り",                                             price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-41",  src: "/images/works/flash/flash-41.jpg",  title: "祈り",                                             price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-43",  src: "/images/works/flash/flash-43.jpg",  title: "蔓",                                               price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 const statusLabel: Record<AvailabilityStatus, string> = {
@@ -118,6 +118,7 @@ export default function FlashPage() {
               {/* Info */}
               <div className="flex flex-col gap-1" style={ts}>
                 <div className="flex flex-col gap-0.5">
+                  <span className="text-white text-[9px] opacity-50">{item.id}</span>
                   <span className="text-white text-xs leading-snug">{item.title}</span>
                   {item.price > 0 && (
                     <span className="text-white text-xs">
