@@ -8,7 +8,7 @@ const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.6)" };
 
 const items = [
   { label: "販売業者",           value: "cn1046hb9an0o42（氏名は請求があった場合は遅滞なく開示します）" },
-  { label: "運営責任者",         value: "cn1046hb9an0o42（氏名は請求があった場合は遅滞なく開示します）" },
+  { label: "運営責任者",         value: "梅本 泰成" },
   { label: "所在地",             value: "東京都練馬区（詳細住所は請求があった場合に速やかに開示いたします）" },
   { label: "電話番号",           value: "090-6653-5580（対応時間：メール・Instagram DMにて随時受付）" },
   { label: "メールアドレス",     value: "cn1046hb9an0o42@icloud.com（随時受付、数日以内にご返信）" },
