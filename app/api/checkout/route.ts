@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
       mode: "payment",
       line_items: [{ price: priceId, quantity: 1 }],
       shipping_address_collection: { allowed_countries: ["JP"] },
-      ...(shippingRateId ? { shipping_rates: [shippingRateId] } : {}),
+      ...(shippingRateId ? { shipping_options: [{ shipping_rate: shippingRateId }] } : {}),
       success_url: `${origin}/shop?success=1`,
       cancel_url: `${origin}/shop`,
     });
