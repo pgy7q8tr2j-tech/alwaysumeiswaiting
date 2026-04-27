@@ -4,10 +4,11 @@ import { useState } from "react";
 
 interface Props {
   priceId: string;
+  shippingRateId?: string;
   label?: string;
 }
 
-export default function ShopCheckoutButton({ priceId, label = "購入する" }: Props) {
+export default function ShopCheckoutButton({ priceId, shippingRateId, label = "購入する" }: Props) {
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
@@ -16,7 +17,7 @@ export default function ShopCheckoutButton({ priceId, label = "購入する" }: 
       const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ priceId }),
+        body: JSON.stringify({ priceId, shippingRateId }),
       });
       const data = await res.json();
       if (data.url) {

@@ -10,11 +10,11 @@ const mono = { fontFamily: "'Courier New', Courier, monospace" };
 const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.7)" };
 
 const shopItems = [
-  { id: "shop-test", src: "", title: "テスト", year: "", medium: "", size: "", price: 50, inStock: true, priceId: "price_1TQpfkEXSQUsr48YJ0VaMfsp" },
-  { id: "shop-08", src: "/images/shop/shop-08.jpg", title: "A continuous life, a sustained awareness of absence...", year: "2025", medium: "oil on canvas", size: "F4  333×242mm", price: 44000, inStock: true, priceId: "price_1TOzggEXSQUsr48YwC18ENus" },
-  { id: "shop-05", src: "/images/shop/shop-05.jpg", title: "無題（20241126）",    year: "2024", medium: "acrylic on canvas / airbrush", size: "F15  652×530mm", price: 55000, inStock: true, priceId: "price_1TOTkmEXSQUsr48YcC5YeZoM" },
-  { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。", year: "2024", medium: "acrylic on canvas / airbrush", size: "F10  530×455mm", price: 44000, inStock: true, priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp" },
-  { id: "shop-07", src: "/images/shop/shop-07.jpg", title: "ゆっくり歩けば暑くない", year: "2025", medium: "oil on panel", size: "140×180mm", price: 16500, inStock: true, priceId: "price_1TOfqKEXSQUsr48YpgykjNor" },
+  { id: "shop-test", src: "", title: "テスト", year: "", medium: "", size: "", price: 50, inStock: true, priceId: "price_1TQpfkEXSQUsr48YJ0VaMfsp", shippingRateId: "" },
+  { id: "shop-08", src: "/images/shop/shop-08.jpg", title: "A continuous life, a sustained awareness of absence...", year: "2025", medium: "oil on canvas", size: "F4  333×242mm", price: 44000, inStock: true, priceId: "price_1TOzggEXSQUsr48YwC18ENus", shippingRateId: "shr_1TQqAzEXSQUsr48YrLpKh3Rs" },
+  { id: "shop-05", src: "/images/shop/shop-05.jpg", title: "無題（20241126）",    year: "2024", medium: "acrylic on canvas / airbrush", size: "F15  652×530mm", price: 55000, inStock: true, priceId: "price_1TOTkmEXSQUsr48YcC5YeZoM", shippingRateId: "shr_1TQqBZEXSQUsr48YDUzlE3Fp" },
+  { id: "shop-06", src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。", year: "2024", medium: "acrylic on canvas / airbrush", size: "F10  530×455mm", price: 44000, inStock: true, priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp", shippingRateId: "shr_1TQqBFEXSQUsr48YPDf7YUBC" },
+  { id: "shop-07", src: "/images/shop/shop-07.jpg", title: "ゆっくり歩けば暑くない", year: "2025", medium: "oil on panel", size: "140×180mm", price: 16500, inStock: true, priceId: "price_1TOfqKEXSQUsr48YpgykjNor", shippingRateId: "shr_1TQqAdEXSQUsr48YKc0HBEen" },
 ];
 
 type ShopItem = (typeof shopItems)[number];
@@ -92,6 +92,7 @@ export default function ShopPage() {
           size={selected.size}
           year={selected.year}
           priceId={selected.priceId}
+          shippingRateId={selected.shippingRateId}
           inStock={selected.inStock}
         />
       )}

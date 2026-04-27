@@ -18,10 +18,11 @@ interface Props {
   size?: string;
   year?: string;
   priceId?: string;
+  shippingRateId?: string;
   inStock?: boolean;
 }
 
-export default function Lightbox({ src, alt, onClose, title, price, medium, size, year, priceId, inStock }: Props) {
+export default function Lightbox({ src, alt, onClose, title, price, medium, size, year, priceId, shippingRateId, inStock }: Props) {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -82,7 +83,7 @@ export default function Lightbox({ src, alt, onClose, title, price, medium, size
             )}
             {inStock && priceId && (
               <div style={{ marginTop: 4 }}>
-                <ShopCheckoutButton priceId={priceId} label="take it home" />
+                <ShopCheckoutButton priceId={priceId} shippingRateId={shippingRateId} label="take it home" />
               </div>
             )}
             {!inStock && (

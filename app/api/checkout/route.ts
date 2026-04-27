@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   }
   const stripe = new Stripe(secretKey);
 
-  const { priceId } = await req.json();
+  const { priceId, shippingRateId } = await req.json();
   if (!priceId) {
     return NextResponse.json({ error: "priceId is required" }, { status: 400 });
   }
@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
       mode: "payment",
       line_items: [{ price: priceId, quantity: 1 }],
       shipping_address_collection: { allowed_countries: ["JP"] },
+      ...(shippingRateId ? { shipping_rates: [shippingRateId] } : {}),
       success_url: `${origin}/shop?success=1`,
       cancel_url: `${origin}/shop`,
     });
