@@ -71,7 +71,12 @@ export default function ShopPage() {
 
               {/* タイトル・価格 */}
               <div className="flex flex-col gap-0.5" style={ts}>
-                <span className="text-white text-xs leading-snug">{item.title}</span>
+                <span className="text-white text-xs leading-snug">
+                  {!item.inStock && (
+                    <span style={{ color: "#ff4444" }}>sold out </span>
+                  )}
+                  {item.title}
+                </span>
                 <span className="text-white text-xs">¥{item.price.toLocaleString()}</span>
               </div>
 
