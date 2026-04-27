@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   const secretKey = process.env.STRIPE_SECRET_KEY;
   if (!secretKey) {
@@ -15,12 +17,16 @@ export async function POST(req: NextRequest) {
 
   const origin = req.headers.get("origin") ?? "http://localhost:3000";
 
-  const session = await stripe.checkout.sessions.create({
-    mode: "payment",
-    line_items: [{ price: priceId, quantity: 1, tax_rates: ["txr_1TOtugEXSQUsr48YGVr66y4T"] }],
-    success_url: `${origin}/shop?success=1`,
-    cancel_url: `${origin}/shop`,
-  });
-
-  return NextResponse.json({ url: session.url });
+  try {
+    const session = await stripe.checkout.sessions.create({
+      mode: "payment",
+      line_items: [{ price: priceId, quantity: 1 }],
+      success_url: `${origin}/shop?success=1`,
+      cancel_url: `${origin}/shop`,
+    });
+    return NextResponse.json({ url: session.url });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown error";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
