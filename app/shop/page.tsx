@@ -17,7 +17,7 @@ const shopItems = [
   { id: "shop-07",   src: "/images/shop/shop-07.jpg", title: "ゆっくり歩けば暑くない",                                  year: "2025", medium: "oil on panel",                  size: "140×180mm",      price: 16500, inStock: true,  priceId: "price_1TOfqKEXSQUsr48YpgykjNor", shippingRateId: "shr_1TQqAdEXSQUsr48YKc0HBEen" },
   { id: "shop-test2", src: "", title: "テスト２", year: "", medium: "", size: "", price: 50,   inStock: false, priceId: "", shippingRateId: "" },
   { id: "shop-test3", src: "", title: "テスト３", year: "", medium: "", size: "", price: 50,   inStock: false, priceId: "", shippingRateId: "" },
-  { id: "shop-test4", src: "", title: "テスト４", year: "", medium: "", size: "", price: 50,   inStock: false, priceId: "", shippingRateId: "" },
+  { id: "shop-test4", src: "/images/shop/shop-test4.jpg", title: "テスト４", year: "", medium: "", size: "", price: 50,   inStock: false, priceId: "", shippingRateId: "" },
 ];
 
 const shuffle = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
