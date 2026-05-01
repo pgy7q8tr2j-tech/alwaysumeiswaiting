@@ -63,6 +63,7 @@ const flashItems: {
   { id: "flash-44",  src: "/images/works/flash/flash-44.jpg",  title: "無題",                                             price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-45",  src: "/images/works/flash/flash-45.jpg",  title: "無題",                                             price: 70000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-46",  src: "/images/works/flash/flash-46.jpg",  title: "蔦",                                               price: 15000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-47",  src: "/images/works/flash/flash-47.jpg",  title: "蔦",                                               price: 15000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 const statusLabel: Record<AvailabilityStatus, string> = {
