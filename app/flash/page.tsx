@@ -71,6 +71,11 @@ const flashItems: {
   { id: "flash-53",  src: "/images/works/flash/flash-53.jpg",  title: "map",                                              price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
+// 元の配列順で固定番号を割り振る
+const flashNumMap: Record<string, number> = Object.fromEntries(
+  flashItems.map((item, i) => [item.id, i + 1])
+);
+
 const statusLabel: Record<AvailabilityStatus, string> = {
   available: "available",
   reserved:  "reserved",
@@ -133,6 +138,9 @@ export default function FlashPage() {
                       ¥{item.price.toLocaleString()}〜
                     </span>
                   )}
+                  <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
+                    #{String(flashNumMap[item.id]).padStart(2, "0")}
+                  </span>
                 </div>
                 {item.size && (
                   <div className="flex items-center justify-between">
