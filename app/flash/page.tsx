@@ -68,6 +68,7 @@ const flashItems: {
   { id: "flash-51",  src: "/images/works/flash/flash-51.jpg",  title: "無題",                                             price: 100000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-52",  src: "/images/works/flash/flash-52.jpg",  title: "無題",                                             price: 20000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-53",  src: "/images/works/flash/flash-53.jpg",  title: "map",                                              price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-54",  src: "/images/works/flash/flash-54.jpg",  title: "map",                                              price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
