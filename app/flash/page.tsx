@@ -53,7 +53,6 @@ const flashItems: {
   { id: "flash-34",  src: "/images/works/flash/flash-34.jpg",  title: "ゆっくり歩けば暑くない",                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-35",  src: "/images/works/flash/flash-35.jpg",  title: "忘れられた町",                                       price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-36",  src: "/images/works/flash/flash-36.jpg",  title: "手のひらの58",                                      price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-37",  src: "/images/works/flash/flash-37.jpg",  title: "村",                                               price: 45000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-38",  src: "/images/works/flash/flash-38.jpg",  title: "村",                                               price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-39",  src: "/images/works/flash/flash-39.jpg",  title: "浮かぶ数字",                                        price: 20000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-40",  src: "/images/works/flash/flash-40.jpg",  title: "祈り",                                             price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
