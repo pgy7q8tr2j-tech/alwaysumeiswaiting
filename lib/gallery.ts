@@ -35,6 +35,8 @@ export const galleryImages = [
   "/images/gallery/IMG_5138.jpg",
   "/images/gallery/IMG_9726.jpg",
   "/images/gallery/IMG_9781.jpg",
+  "/images/gallery/IMG_5472.jpg",
+  "/images/gallery/IMG_5505.jpg",
 ];
 
 export function pickRandom(images: string[] = galleryImages): string {
