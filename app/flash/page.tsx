@@ -45,7 +45,6 @@ const flashItems: {
   { id: "flash-24",  src: "/images/works/flash/flash-24.jpg",  title: "Relationship between space-time and crystals",     price: 60000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-25",  src: "/images/works/flash/flash-25.jpg",  title: "Relationship between space-time and darkness",     price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-26",  src: "/images/works/flash/flash-26.jpg",  title: "Summon space and time!",                           price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-28",  src: "/images/works/flash/flash-28.jpg",  title: "Symbol of the type of space-time",                 price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-31",  src: "/images/works/flash/flash-31.jpg",  title: "hug",                                              price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-32",  src: "/images/works/flash/flash-32.jpg",  title: "✌🏻に侵入に侵入",                                    price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-33",  src: "/images/works/flash/flash-33.jpg",  title: "✌🏻の夢",                                           price: 20000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
