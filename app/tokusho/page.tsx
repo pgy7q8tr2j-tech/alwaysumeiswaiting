@@ -25,7 +25,11 @@ const items = [
 export default function TokushoPage() {
   return (
     <PhotoBackground overlay={40}>
-      <HomeButton />
+      <HomeButton onBeforeNavigate={() => {
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("archiveUnlocked", "1");
+        }
+      }} />
       <div className="min-h-screen px-7 pt-20 pb-24 md:px-14 max-w-xl">
         <h1 className="text-white text-sm mb-10" style={ts}>
           特定商取引法に基づく表記

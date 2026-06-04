@@ -2,10 +2,15 @@
 
 import Link from "next/link";
 
-export default function HomeButton() {
+interface Props {
+  onBeforeNavigate?: () => void;
+}
+
+export default function HomeButton({ onBeforeNavigate }: Props) {
   return (
     <Link
       href="/"
+      onClick={onBeforeNavigate}
       className="fixed top-6 left-6 z-40 text-white text-base transition-opacity hover:opacity-70"
       style={{
         fontFamily: "'Courier New', Courier, monospace",

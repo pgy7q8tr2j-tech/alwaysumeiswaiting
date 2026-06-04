@@ -81,15 +81,30 @@ const statusLabel: Record<AvailabilityStatus, string> = {
   sold:      "sold out",
 };
 
+const archivedItems = [
+  { id: "arch-27", src: "/images/works/flash/flash-27.jpg", title: "Symbol of layers of time and space", price: 25000 },
+  { id: "arch-28", src: "/images/works/flash/flash-28.jpg", title: "Symbol of the type of space-time",   price: 30000 },
+  { id: "arch-29", src: "/images/works/flash/flash-29.jpg", title: "Symbol of the type of space-time",   price: 20000 },
+  { id: "arch-37", src: "/images/works/flash/flash-37.jpg", title: "村",                                  price: 45000 },
+  { id: "arch-38", src: "/images/works/flash/flash-38.jpg", title: "村",                                  price: 30000 },
+  { id: "arch-46", src: "/images/works/flash/flash-46.jpg", title: "蔦",                                  price: 15000 },
+  { id: "arch-49", src: "/images/works/flash/flash-49.jpg", title: "無題",                                price: 10000 },
+];
+
 type FlashItem = (typeof flashItems)[number];
 
 export default function FlashPage() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
-  // 毎回ランダムな順番で表示
   const [shuffled, setShuffled] = useState<FlashItem[]>(flashItems);
+  const [showArchive, setShowArchive] = useState(false);
 
   useEffect(() => {
     setShuffled([...flashItems].sort(() => Math.random() - 0.5));
+    // 裏コマンド：特商→homeの順で操作後にflashを開くとアーカイブ表示
+    if (typeof window !== "undefined" && sessionStorage.getItem("archiveUnlocked") === "1") {
+      sessionStorage.removeItem("archiveUnlocked"); // 消費（リロードで再度コマンド必要）
+      setShowArchive(true);
+    }
   }, []);
 
   return (
@@ -151,6 +166,38 @@ export default function FlashPage() {
             </div>
           ))}
         </div>
+
+        {/* アーカイブ（裏コマンド解放時のみ表示） */}
+        {showArchive && (
+          <div className="px-0 pt-20 pb-10">
+            <p className="text-white/20 text-[10px] mb-10" style={mono}>archive</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 md:gap-x-10 md:gap-y-14">
+              {archivedItems.map((item) => (
+                <div key={item.id} className="flex flex-col gap-2">
+                  <button
+                    onClick={() => setLightbox({ src: item.src, alt: item.title })}
+                    className="relative w-full aspect-square overflow-hidden bg-white/10 cursor-zoom-in block"
+                    style={{ border: "none", padding: 0 }}
+                  >
+                    <Image
+                      src={item.src}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-opacity duration-300 hover:opacity-80"
+                      sizes="(max-width: 768px) 40vw, 28vw"
+                    />
+                  </button>
+                  <div className="flex flex-col gap-0.5" style={ts}>
+                    <span className="text-white text-xs leading-snug">{item.title}</span>
+                    {item.price > 0 && (
+                      <span className="text-white text-xs">¥{item.price.toLocaleString()}〜</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Lightbox */}
