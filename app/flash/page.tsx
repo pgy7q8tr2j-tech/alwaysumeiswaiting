@@ -68,6 +68,9 @@ const flashItems: {
   { id: "flash-56",  src: "/images/works/flash/flash-56.jpg",  title: "2人",                                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-57",  src: "/images/works/flash/flash-57.jpg",  title: "Memories of titans",                                        price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-58",  src: "/images/works/flash/flash-58.jpg",  title: "蔦",                                               price: 15000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-28",  src: "/images/works/flash/flash-28.jpg",  title: "Symbol of the type of space-time",                price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-46",  src: "/images/works/flash/flash-46.jpg",  title: "蔦",                                               price: 15000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-49",  src: "/images/works/flash/flash-49.jpg",  title: "無題",                                             price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
@@ -83,12 +86,9 @@ const statusLabel: Record<AvailabilityStatus, string> = {
 
 const archivedItems = [
   { id: "arch-27", src: "/images/works/flash/flash-27.jpg", title: "Symbol of layers of time and space", price: 25000 },
-  { id: "arch-28", src: "/images/works/flash/flash-28.jpg", title: "Symbol of the type of space-time",   price: 30000 },
   { id: "arch-29", src: "/images/works/flash/flash-29.jpg", title: "Symbol of the type of space-time",   price: 20000 },
   { id: "arch-37", src: "/images/works/flash/flash-37.jpg", title: "村",                                  price: 45000 },
   { id: "arch-38", src: "/images/works/flash/flash-38.jpg", title: "村",                                  price: 30000 },
-  { id: "arch-46", src: "/images/works/flash/flash-46.jpg", title: "蔦",                                  price: 15000 },
-  { id: "arch-49", src: "/images/works/flash/flash-49.jpg", title: "無題",                                price: 10000 },
 ];
 
 type FlashItem = (typeof flashItems)[number];
