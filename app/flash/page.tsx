@@ -192,6 +192,9 @@ export default function FlashPage() {
                     {item.price > 0 && (
                       <span className="text-white text-xs">¥{item.price.toLocaleString()}〜</span>
                     )}
+                    <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
+                      A-{String(archivedItems.indexOf(item) + 1).padStart(2, "0")}
+                    </span>
                   </div>
                 </div>
               ))}
