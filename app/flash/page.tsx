@@ -55,7 +55,6 @@ const flashItems: {
   { id: "flash-40",  src: "/images/works/flash/flash-40.jpg",  title: "祈り",                                             price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-41",  src: "/images/works/flash/flash-41.jpg",  title: "祈り",                                             price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-43",  src: "/images/works/flash/flash-43.jpg",  title: "蔓",                                               price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-44",  src: "/images/works/flash/flash-44.jpg",  title: "無題",                                             price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-45",  src: "/images/works/flash/flash-45.jpg",  title: "無題",                                             price: 70000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-47",  src: "/images/works/flash/flash-47.jpg",  title: "蔦",                                               price: 15000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-48",  src: "/images/works/flash/flash-48.jpg",  title: "無題",                                             price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
@@ -89,6 +88,7 @@ const archivedItems = [
   { id: "arch-29", src: "/images/works/flash/flash-29.jpg", title: "Symbol of the type of space-time",   price: 20000 },
   { id: "arch-37", src: "/images/works/flash/flash-37.jpg", title: "村",                                  price: 45000 },
   { id: "arch-38", src: "/images/works/flash/flash-38.jpg", title: "村",                                  price: 30000 },
+  { id: "arch-44", src: "/images/works/flash/flash-44.jpg", title: "無題",                                price: 40000 },
 ];
 
 type FlashItem = (typeof flashItems)[number];
