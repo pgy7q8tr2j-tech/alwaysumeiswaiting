@@ -61,7 +61,6 @@ const flashItems: {
   { id: "flash-51",  src: "/images/works/flash/flash-51.jpg",  title: "無題",                                             price: 100000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-52",  src: "/images/works/flash/flash-52.jpg",  title: "無題",                                             price: 20000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-54",  src: "/images/works/flash/flash-54.jpg",  title: "map",                                              price: 10000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-55",  src: "/images/works/flash/flash-55.jpg",  title: "Memories of titans",                                        price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-56",  src: "/images/works/flash/flash-56.jpg",  title: "2人",                                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-57",  src: "/images/works/flash/flash-57.jpg",  title: "Memories of titans",                                        price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-58",  src: "/images/works/flash/flash-58.jpg",  title: "蔦",                                               price: 15000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
