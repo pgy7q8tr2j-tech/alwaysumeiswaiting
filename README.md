@@ -137,3 +137,137 @@ public/
 | `/shop` | アート原画・プリント販売 |
 | `/about` | アーティストステートメント |
 | `/booking` | タトゥー予約案内 |
+
+---
+
+## 第二の脳 MCP サーバー
+
+Claudeのチャット（カスタムコネクタ）から呼べる個人用メモ・タスク管理サーバー。  
+MCPエンドポイント: `https://<your-domain>.vercel.app/api/mcp`
+（Pages Router `/pages/api/mcp/index.ts` として実装）
+
+### 使えるMCPツール一覧
+
+| ツール | 用途 |
+|--------|------|
+| `add_memo` | メモを保存＋関連候補を返す |
+| `link_memos` | メモ同士をリンク |
+| `search_memos` | キーワード検索（日本語可） |
+| `get_memo` | IDで1件取得（リンク情報含む） |
+| `list_memos` | 一覧取得（kind/area/statusでフィルタ） |
+| `list_related` | リンク済み＋候補関連を表示 |
+| `update_memo` | フィールド更新 |
+| `complete_task` | タスクを完了にする |
+| `list_tasks` | 優先度・期限順のタスク一覧 |
+| `export_all` | 全データをJSON/Markdownで書き出す |
+
+---
+
+### セットアップ手順
+
+#### ① GitHub にプッシュ
+
+このリポジトリを GitHub にプッシュしてください（Vercel が自動デプロイするために必要）。
+
+```bash
+git add -A
+git commit -m "add second-brain MCP server"
+git push origin main
+```
+
+---
+
+#### ② Neon（無料Postgres）のセットアップ
+
+1. [neon.tech](https://neon.tech) でアカウント作成（GitHub ログイン可）
+2. 「Create Project」→ プロジェクト名を入力して作成
+3. ダッシュボードの **Connection Details** → **Connection string** をコピー
+
+   形式: `postgresql://username:password@xxx.neon.tech/neondb?sslmode=require`
+
+4. **SQL Editor** を開き、`migrations/001_init.sql` の内容を貼り付けて「Run」
+
+   → `memos` テーブルと `links` テーブルが作成されます
+
+---
+
+#### ③ 環境変数を準備
+
+シークレットトークンを生成（ターミナルで実行）:
+
+```bash
+openssl rand -hex 32
+```
+
+出力された値をメモしておく（後で使用）。
+
+---
+
+#### ④ Vercel にデプロイ
+
+1. [vercel.com](https://vercel.com) にログイン → 「Add New → Project」
+2. GitHub リポジトリを選択して「Import」
+3. **Environment Variables** に以下を追加:
+
+   | 変数名 | 値 |
+   |--------|----|
+   | `DATABASE_URL` | Neon の接続文字列 |
+   | `MCP_SECRET_TOKEN` | 生成したシークレットトークン |
+
+4. 「Deploy」をクリック
+
+デプロイ完了後、Vercel のプロジェクトページに表示される URL を確認。
+
+---
+
+#### ⑤ MCP エンドポイント URL
+
+```
+https://<your-vercel-domain>.vercel.app/api/mcp
+```
+
+（例: `https://alwaysumeiswaiting.vercel.app/api/mcp`）
+
+---
+
+#### ⑥ Claude アプリにカスタム MCP コネクタとして追加
+
+**Claude.ai デスクトップアプリ（macOS/Windows）の場合:**
+
+1. Claude アプリを開く
+2. 左サイドバーまたはメニューから **Settings（設定）** を開く
+3. **Developer（開発者）** タブ → **Model Context Protocol** セクション
+4. 「**Add MCP Server**」をクリック
+5. 以下を入力:
+   - **Name**: `second-brain`（任意）
+   - **URL**: `https://<your-vercel-domain>.vercel.app/api/mcp`
+   - **Authentication**: Bearer Token
+   - **Token**: `MCP_SECRET_TOKEN` に設定した値
+6. 「Save」で保存
+
+**接続確認:**  
+チャットで「`list_memos` を呼んで」と話しかけ、ツールが使えれば成功。
+
+---
+
+### データモデル
+
+```
+memos
+  id          UUID (PK)
+  content     TEXT          メモ本文
+  kind        memo | task | asset | decision
+  area        TEXT          creative / practice / investing / other など
+  priority    P0 | P1 | P2
+  status      open | done   (task のみ使用)
+  due_date    DATE
+  created_at / updated_at
+
+links
+  from_id → to_id  (UUID FK → memos)
+  reason   TEXT    なぜ関連するか
+```
+
+### 検索の仕組み
+
+`pg_trgm` 拡張の三角グラム類似度（`similarity()`）と `ILIKE` の組み合わせで日本語テキストを検索します。ベクトル埋め込みは使わないため、追加コストは一切かかりません。
