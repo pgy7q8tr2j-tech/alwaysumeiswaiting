@@ -74,6 +74,8 @@ const flashItems: {
   { id: "flash-62",  src: "/images/works/flash/flash-62.jpg",  title: "勧誘",                                             price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-63",  src: "/images/works/flash/flash-63.jpg",  title: "思うところあり",                                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-64",  src: "/images/works/flash/flash-64.jpg",  title: "眉毛の長い男",                                      price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-65",  src: "/images/works/flash/flash-65.jpg",  title: "ゆっくり歩けば暑くない",                              price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-66",  src: "/images/works/flash/flash-66.jpg",  title: "2人",                                              price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
