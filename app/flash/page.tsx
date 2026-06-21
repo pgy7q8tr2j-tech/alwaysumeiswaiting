@@ -154,11 +154,6 @@ export default function FlashPage() {
               <div className="flex flex-col gap-1" style={ts}>
                 <div className="flex flex-col gap-0.5">
                   <span className="text-white text-xs leading-snug">{item.title}</span>
-                  {item.price > 0 && (
-                    <span className="text-white text-xs">
-                      ¥{item.price.toLocaleString()}〜
-                    </span>
-                  )}
                   <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
                     #{String(flashNumMap[item.id]).padStart(2, "0")}
                   </span>
@@ -196,9 +191,6 @@ export default function FlashPage() {
                   </button>
                   <div className="flex flex-col gap-0.5" style={ts}>
                     <span className="text-white text-xs leading-snug">{item.title}</span>
-                    {item.price > 0 && (
-                      <span className="text-white text-xs">¥{item.price.toLocaleString()}〜</span>
-                    )}
                     <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
                       A-{String(archivedItems.indexOf(item) + 1).padStart(2, "0")}
                     </span>
