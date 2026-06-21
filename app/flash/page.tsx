@@ -107,7 +107,7 @@ export default function FlashPage() {
   const [showTitles, setShowTitles] = useState(false);
 
   useEffect(() => {
-    setShuffled([...flashItems].sort(() => Math.random() - 0.5));
+    setShuffled([...flashItems]);
     if (typeof window !== "undefined") {
       // 裏コマンド①：特商→home→flash でアーカイブのみ表示
       if (sessionStorage.getItem("archiveUnlocked") === "1") {
