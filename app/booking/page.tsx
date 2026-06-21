@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import PhotoBackground from "@/components/PhotoBackground";
 import BookingDepositButton from "@/components/BookingDepositButton";
 import HomeButton from "@/components/HomeButton";
@@ -31,9 +32,20 @@ const steps = [
 ];
 
 export default function BookingPage() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // bookingを訪問したらシーケンス開始（リセット）
+      sessionStorage.setItem("flashSeq", "1");
+    }
+  }, []);
+
   return (
     <PhotoBackground overlay={32}>
-      <HomeButton />
+      <HomeButton onBeforeNavigate={() => {
+        if (typeof window !== "undefined" && sessionStorage.getItem("flashSeq") === "1") {
+          sessionStorage.setItem("flashSeq", "2");
+        }
+      }} />
       <div className="min-h-screen px-7 pt-20 pb-24 md:px-14">
 
 

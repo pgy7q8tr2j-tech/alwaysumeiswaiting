@@ -28,11 +28,22 @@ export default function ShopPage() {
     const inStock    = shuffle(shopItems.filter((i) => i.inStock));
     const soldOut    = shuffle(shopItems.filter((i) => !i.inStock));
     setShuffled([...inStock, ...soldOut]);
+
+    // シーケンス継続：bookingからhomeを経由してshopに来たら次のステップへ
+    if (typeof window !== "undefined" && sessionStorage.getItem("flashSeq") === "2") {
+      sessionStorage.setItem("flashSeq", "3");
+    }
   }, []);
 
   return (
     <PhotoBackground overlay={18}>
-      <HomeButton />
+      <HomeButton onBeforeNavigate={() => {
+        if (typeof window !== "undefined" && sessionStorage.getItem("flashSeq") === "3") {
+          // シーケンス完了：タイトル＋アーカイブ表示フラグをセット
+          sessionStorage.setItem("titlesUnlocked", "1");
+          sessionStorage.removeItem("flashSeq");
+        }
+      }} />
       <div className="min-h-screen px-14 pt-20 pb-28 md:px-20 lg:px-28">
 
         <p className="text-white text-xs leading-loose mb-14" style={ts}>

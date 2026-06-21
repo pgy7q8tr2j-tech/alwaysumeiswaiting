@@ -104,13 +104,22 @@ export default function FlashPage() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const [shuffled, setShuffled] = useState<FlashItem[]>(flashItems);
   const [showArchive, setShowArchive] = useState(false);
+  const [showTitles, setShowTitles] = useState(false);
 
   useEffect(() => {
     setShuffled([...flashItems].sort(() => Math.random() - 0.5));
-    // 裏コマンド：特商→homeの順で操作後にflashを開くとアーカイブ表示
-    if (typeof window !== "undefined" && sessionStorage.getItem("archiveUnlocked") === "1") {
-      sessionStorage.removeItem("archiveUnlocked"); // 消費（リロードで再度コマンド必要）
-      setShowArchive(true);
+    if (typeof window !== "undefined") {
+      // 裏コマンド①：特商→home→flash でアーカイブのみ表示
+      if (sessionStorage.getItem("archiveUnlocked") === "1") {
+        sessionStorage.removeItem("archiveUnlocked");
+        setShowArchive(true);
+      }
+      // 裏コマンド②：booking→home→shop→home→flash でタイトル＋アーカイブ表示
+      if (sessionStorage.getItem("titlesUnlocked") === "1") {
+        sessionStorage.removeItem("titlesUnlocked");
+        setShowTitles(true);
+        setShowArchive(true);
+      }
     }
   }, []);
 
@@ -153,7 +162,9 @@ export default function FlashPage() {
               {/* Info */}
               <div className="flex flex-col gap-1" style={ts}>
                 <div className="flex flex-col gap-0.5">
-                  <span className="text-white text-xs leading-snug">{item.title}</span>
+                  {showTitles && (
+                    <span className="text-white text-xs leading-snug">{item.title}</span>
+                  )}
                   <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
                     #{String(flashNumMap[item.id]).padStart(2, "0")}
                   </span>
@@ -190,7 +201,9 @@ export default function FlashPage() {
                     />
                   </button>
                   <div className="flex flex-col gap-0.5" style={ts}>
-                    <span className="text-white text-xs leading-snug">{item.title}</span>
+                    {showTitles && (
+                      <span className="text-white text-xs leading-snug">{item.title}</span>
+                    )}
                     <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
                       A-{String(archivedItems.indexOf(item) + 1).padStart(2, "0")}
                     </span>
