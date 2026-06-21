@@ -165,7 +165,7 @@ export default function FlashPage() {
                   {showTitles && (
                     <span className="text-white text-xs leading-snug">{item.title}</span>
                   )}
-                  <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
+                  <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
                     #{String(flashNumMap[item.id]).padStart(2, "0")}
                   </span>
                 </div>
@@ -204,7 +204,7 @@ export default function FlashPage() {
                     {showTitles && (
                       <span className="text-white text-xs leading-snug">{item.title}</span>
                     )}
-                    <span style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
+                    <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
                       A-{String(archivedItems.indexOf(item) + 1).padStart(2, "0")}
                     </span>
                   </div>
