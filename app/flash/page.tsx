@@ -19,14 +19,15 @@ const flashItems: {
   price: number; size: string;
   availability: AvailabilityStatus; priceId: string;
 }[] = [
-  { id: "flash-59",  src: "/images/works/flash/flash-59.jpg",  title: "120",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-60",  src: "/images/works/flash/flash-60.jpg",  title: "だって夢だもんね",       price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-61",  src: "/images/works/flash/flash-61.jpg",  title: "ホームビデオ悲しい",     price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-62",  src: "/images/works/flash/flash-62.jpg",  title: "勧誘",                 price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-63",  src: "/images/works/flash/flash-63.jpg",  title: "思うところあり",         price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-64",  src: "/images/works/flash/flash-64.jpg",  title: "眉毛の長い男",          price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-65",  src: "/images/works/flash/flash-65.jpg",  title: "ゆっくり歩けば暑くない", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-66",  src: "/images/works/flash/flash-66.jpg",  title: "2人",                  price: 25000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-67", src: "/images/works/flash/flash-67.jpg", title: "思うところあり",         price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-68", src: "/images/works/flash/flash-68.jpg", title: "ゆっくり歩けば暑くない", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-69", src: "/images/works/flash/flash-69.jpg", title: "だって夢だもんね",       price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-70", src: "/images/works/flash/flash-70.jpg", title: "勧誘",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-71", src: "/images/works/flash/flash-71.jpg", title: "眉毛の長い男",           price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-72", src: "/images/works/flash/flash-72.jpg", title: "ホームビデオ悲しい",     price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-73", src: "/images/works/flash/flash-73.jpg", title: "魔女",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-74", src: "/images/works/flash/flash-74.jpg", title: "120",                   price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-75", src: "/images/works/flash/flash-75.jpg", title: "2人",                   price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
