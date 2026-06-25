@@ -27,7 +27,13 @@ const flashItems: {
   { id: "flash-72", src: "/images/works/flash/flash-72.jpg", title: "ホームビデオ悲しい",     price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-73", src: "/images/works/flash/flash-73.jpg", title: "魔女",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-75", src: "/images/works/flash/flash-75.jpg", title: "2人",                   price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-76", src: "/images/works/flash/flash-76.jpg", title: "口",                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-76", src: "/images/works/flash/flash-76.jpg", title: "口",      price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-78", src: "/images/works/flash/flash-78.jpg", title: "alone",   price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-79", src: "/images/works/flash/flash-79.jpg", title: "20241012", price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-80", src: "/images/works/flash/flash-80.jpg", title: "登山",    price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-81", src: "/images/works/flash/flash-81.jpg", title: "dive!!!",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-82", src: "/images/works/flash/flash-82.jpg", title: "20240515", price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-83", src: "/images/works/flash/flash-83.jpg", title: "共犯",    price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
