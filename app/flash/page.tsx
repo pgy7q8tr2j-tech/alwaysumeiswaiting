@@ -28,7 +28,6 @@ const flashItems: {
   { id: "flash-73", src: "/images/works/flash/flash-73.jpg", title: "魔女",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-75", src: "/images/works/flash/flash-75.jpg", title: "2人",                   price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-76", src: "/images/works/flash/flash-76.jpg", title: "口",                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-77", src: "/images/works/flash/flash-77.jpg", title: "花",                    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
@@ -101,6 +100,7 @@ const archivedItems = [
   { id: "arch-44", src: "/images/works/flash/flash-44.jpg", title: "無題",                                        price: 40000 },
   { id: "arch-38", src: "/images/works/flash/flash-38.jpg", title: "村",                                          price: 30000 },
   { id: "arch-74", src: "/images/works/flash/flash-74.jpg", title: "120",                                         price: 30000 },
+  { id: "arch-77", src: "/images/works/flash/flash-77.jpg", title: "花",                                          price: 30000 },
 ];
 
 type FlashItem = (typeof flashItems)[number];
