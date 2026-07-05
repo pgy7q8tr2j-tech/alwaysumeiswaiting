@@ -34,6 +34,8 @@ const flashItems: {
   { id: "flash-81", src: "/images/works/flash/flash-81.jpg", title: "dive!!!",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-82", src: "/images/works/flash/flash-82.jpg", title: "20240515", price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-83", src: "/images/works/flash/flash-83.jpg", title: "共犯",    price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-84", src: "/images/works/flash/flash-84.jpg", title: "時空",    price: 45000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-85", src: "/images/works/flash/flash-85.jpg", title: "弓",      price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
