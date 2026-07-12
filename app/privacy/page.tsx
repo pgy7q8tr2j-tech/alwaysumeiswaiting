@@ -33,7 +33,7 @@ const sections = [
   },
   {
     title: "7. お問い合わせ",
-    body: "個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。\nメール：cn1046hb9an0o42@icloud.com\nInstagram DM：@cn1046hb9an0o42",
+    body: "個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。\nメール：cn1046hb9an0o42@icloud.com\nInstagram DM：@vegetablizevampire",
   },
   {
     title: "8. プライバシーポリシーの変更",
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           プライバシーポリシー
         </h1>
         <p className="text-white text-[10px] mb-10" style={{ ...ts, opacity: 0.6 }}>
-          cn1046hb9an0o42 / TAI
+          vegetablizevampire / TAI
         </p>
 
         <div className="flex flex-col gap-8">
