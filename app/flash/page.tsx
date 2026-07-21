@@ -35,6 +35,15 @@ const flashItems: {
   { id: "flash-83", src: "/images/works/flash/flash-83.jpg", title: "共犯",    price: 35000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-84", src: "/images/works/flash/flash-84.jpg", title: "時空",    price: 45000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-85", src: "/images/works/flash/flash-85.jpg", title: "弓",      price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-86", src: "/images/works/flash/flash-86.jpg", title: "vampire", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-87", src: "/images/works/flash/flash-87.jpg", title: "vampire", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-88", src: "/images/works/flash/flash-88.jpg", title: "ナイフ",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-89", src: "/images/works/flash/flash-89.jpg", title: "❄️",      price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-90", src: "/images/works/flash/flash-90.jpg", title: "視点装置", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-91", src: "/images/works/flash/flash-91.jpg", title: "vampire", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-92", src: "/images/works/flash/flash-92.jpg", title: "ハサミ",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-93", src: "/images/works/flash/flash-93.jpg", title: "クロス",  price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-94", src: "/images/works/flash/flash-94.jpg", title: "ネコ",    price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
