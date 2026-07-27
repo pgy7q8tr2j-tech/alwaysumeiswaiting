@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vegetablizevampire.vercel.app"),
+  metadataBase: new URL("https://vegetablize10.vercel.app"),
   title: "vegetablizevampire",
   description: "vegetablizevampire",
   openGraph: {
     title: "vegetablizevampire",
     description: "vegetablizevampire",
-    url: "https://vegetablizevampire.vercel.app",
+    url: "https://vegetablize10.vercel.app",
     siteName: "vegetablizevampire",
     images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "vegetablizevampire" }],
     locale: "ja_JP",

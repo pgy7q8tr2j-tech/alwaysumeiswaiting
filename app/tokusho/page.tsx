@@ -13,7 +13,7 @@ const items = [
   { label: "電話番号",           value: "090-6653-5580（対応時間：メール・Instagram DMにて随時受付）" },
   { label: "メールアドレス",     value: "cn1046hb9an0o42@icloud.com（随時受付、数日以内にご返信）" },
   { label: "Instagram",         value: "@vegetablizevampire（DM随時受付、数日以内にご返信）" },
-  { label: "販売URL",            value: "https://vegetablizevampire.vercel.app" },
+  { label: "販売URL",            value: "https://vegetablize10.vercel.app" },
   { label: "販売価格",           value: "各商品・サービスページに記載の価格（消費税込み）" },
   { label: "商品代金以外の費用", value: "なし（配送が必要な場合は別途送料をご案内します）" },
   { label: "支払方法",           value: "クレジットカード（Stripe決済）" },
