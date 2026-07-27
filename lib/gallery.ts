@@ -37,6 +37,12 @@ export const galleryImages = [
   "/images/gallery/IMG_9781.jpg",
   "/images/gallery/IMG_5472.jpg",
   "/images/gallery/IMG_5505.jpg",
+  "/images/gallery/IMG_0015.jpg",
+  "/images/gallery/IMG_0029.jpg",
+  "/images/gallery/IMG_0081.jpg",
+  // 以下2枚は幅1179px以下だが、指定により追加
+  "/images/gallery/IMG_BG01.jpg",
+  "/images/gallery/IMG_0011.jpg",
 ];
 
 export function pickRandom(images: string[] = galleryImages): string {
