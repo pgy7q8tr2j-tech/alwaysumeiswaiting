@@ -3,21 +3,21 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vegetablize10.vercel.app"),
-  title: "vegetablizevampire",
-  description: "vegetablizevampire",
+  title: "vegetablize.10",
+  description: "vegetablize.10",
   openGraph: {
-    title: "vegetablizevampire",
-    description: "vegetablizevampire",
+    title: "vegetablize.10",
+    description: "vegetablize.10",
     url: "https://vegetablize10.vercel.app",
-    siteName: "vegetablizevampire",
-    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "vegetablizevampire" }],
+    siteName: "vegetablize.10",
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "vegetablize.10" }],
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "vegetablizevampire",
-    description: "vegetablizevampire",
+    title: "vegetablize.10",
+    description: "vegetablize.10",
     images: ["/images/og.jpg"],
   },
 };

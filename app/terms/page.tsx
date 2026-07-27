@@ -41,7 +41,7 @@ const sections = [
   },
   {
     title: "9. お問い合わせ",
-    body: "メール：cn1046hb9an0o42@icloud.com\nInstagram DM：@vegetablizevampire",
+    body: "メール：cn1046hb9an0o42@icloud.com\nInstagram DM：@vegetablize.10",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function TermsPage() {
           利用規約
         </h1>
         <p className="text-white text-[10px] mb-10" style={{ ...ts, opacity: 0.6 }}>
-          vegetablizevampire / TAI
+          vegetablize.10 / TAI
         </p>
 
         <div className="flex flex-col gap-8">
