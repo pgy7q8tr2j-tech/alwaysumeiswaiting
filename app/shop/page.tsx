@@ -14,6 +14,8 @@ const shopItems = [
   { id: "shop-05",   src: "/images/shop/shop-05.jpg", title: "無題（20241126）",                                       year: "2024", medium: "acrylic on canvas / airbrush", size: "F15  652×530mm", price: 55000, inStock: true,  priceId: "price_1TOTkmEXSQUsr48YcC5YeZoM", shippingRateId: "shr_1TQqBZEXSQUsr48YDUzlE3Fp" },
   { id: "shop-06",   src: "/images/shop/shop-06.jpg", title: "もっと、ずっと速く。",                                    year: "2024", medium: "acrylic on canvas / airbrush", size: "F10  530×455mm", price: 44000, inStock: true,  priceId: "price_1TOTlCEXSQUsr48Y3jjOKxNp", shippingRateId: "shr_1TQqBFEXSQUsr48YPDf7YUBC" },
   { id: "shop-07",   src: "/images/shop/shop-07.jpg", title: "ゆっくり歩けば暑くない",                                  year: "2025", medium: "oil on panel",                  size: "140×180mm",      price: 16500, inStock: true,  priceId: "price_1TOfqKEXSQUsr48YpgykjNor", shippingRateId: "shr_1TQqAdEXSQUsr48YKc0HBEen" },
+  { id: "shop-09",   src: "/images/shop/shop-09.jpg", title: "ぼかして軽くして見続けて重くする",                          year: "2025", medium: "airbrush on canvas",            size: "227×158mm",      price: 27500, inStock: true,  priceId: "price_1TyDg7EXSQUsr48Y6Xi6ySyg", shippingRateId: "shr_1TQqAdEXSQUsr48YKc0HBEen" },
+  { id: "shop-10",   src: "/images/shop/shop-10.jpg", title: "An Experiment in Watching the Self Through Other Filters...", year: "2025", medium: "airbrush on canvas",            size: "530×455mm",      price: 44000, inStock: true,  priceId: "price_1TyDg8EXSQUsr48YS3c9uX75", shippingRateId: "shr_1TQqBFEXSQUsr48YPDf7YUBC" },
 ];
 
 const shuffle = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
