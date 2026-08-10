@@ -45,6 +45,10 @@ const flashItems: {
   { id: "flash-94", src: "/images/works/flash/flash-94.jpg", title: "ネコ",    price: 40000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-95", src: "/images/works/flash/flash-95.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-96", src: "/images/works/flash/flash-96.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-97", src: "/images/works/flash/flash-97.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-98", src: "/images/works/flash/flash-98.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-99", src: "/images/works/flash/flash-99.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-100", src: "/images/works/flash/flash-100.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
