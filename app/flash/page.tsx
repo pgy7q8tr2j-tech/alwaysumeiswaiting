@@ -21,7 +21,6 @@ const flashItems: {
 }[] = [
   { id: "flash-67", src: "/images/works/flash/flash-67.jpg", title: "思うところあり",         price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-68", src: "/images/works/flash/flash-68.jpg", title: "ゆっくり歩けば暑くない", price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-70", src: "/images/works/flash/flash-70.jpg", title: "勧誘",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-71", src: "/images/works/flash/flash-71.jpg", title: "眉毛の長い男",           price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-72", src: "/images/works/flash/flash-72.jpg", title: "ホームビデオ悲しい",     price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-73", src: "/images/works/flash/flash-73.jpg", title: "魔女",                  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
@@ -120,6 +119,7 @@ const archivedItems = [
   { id: "arch-74", src: "/images/works/flash/flash-74.jpg", title: "120",                                         price: 30000 },
   { id: "arch-77", src: "/images/works/flash/flash-77.jpg", title: "花",                                          price: 30000 },
   { id: "arch-69", src: "/images/works/flash/flash-69.jpg", title: "だって夢だもんね",                              price: 30000 },
+  { id: "arch-70", src: "/images/works/flash/flash-70.jpg", title: "勧誘",                                          price: 30000 },
 ];
 
 type FlashItem = (typeof flashItems)[number];
