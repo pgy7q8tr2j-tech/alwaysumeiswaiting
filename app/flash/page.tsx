@@ -38,6 +38,11 @@ const flashItems: {
   { id: "flash-96", src: "/images/works/flash/flash-96.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-97", src: "/images/works/flash/flash-97.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-99", src: "/images/works/flash/flash-99.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-101", src: "/images/works/flash/flash-101.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-102", src: "/images/works/flash/flash-102.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-103", src: "/images/works/flash/flash-103.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-104", src: "/images/works/flash/flash-104.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
+  { id: "flash-105", src: "/images/works/flash/flash-105.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
 ];
 
 // 元の配列順で固定番号を割り振る
