@@ -69,7 +69,7 @@ export default function ShopPage() {
             <p
               style={{
                 ...mono,
-                color:         "#ffffff",
+                color:         "rgba(255,255,255,0.72)",
                 fontSize:      "clamp(1.8rem, 6vw, 3.2rem)",
                 fontWeight:    700,
                 letterSpacing: "0.05em",
