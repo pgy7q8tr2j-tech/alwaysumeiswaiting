@@ -60,6 +60,16 @@ export default function ShopPage() {
           shipped after purchase. inquiries via instagram dm.
         </p>
 
+        {/* 作品が無いとき：画面中央に no item */}
+        {shuffled.length === 0 && (
+          <div
+            className="flex items-center justify-center"
+            style={{ position: "fixed", inset: 0, zIndex: 2, pointerEvents: "none" }}
+          >
+            <p className="text-white text-xs" style={ts}>no item</p>
+          </div>
+        )}
+
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10 md:gap-y-16">
           {shuffled.map((item) => (
