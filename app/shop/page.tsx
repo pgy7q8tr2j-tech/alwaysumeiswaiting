@@ -70,7 +70,7 @@ export default function ShopPage() {
               style={{
                 ...mono,
                 color:         "rgba(255,255,255,0.72)",
-                fontSize:      "clamp(1.8rem, 6vw, 3.2rem)",
+                fontSize:      "clamp(1.4rem, 4.5vw, 2.4rem)",
                 fontWeight:    700,
                 letterSpacing: "0.05em",
                 // 背景写真がランダムなため、明るい写真でも読めるよう影を重ねる
