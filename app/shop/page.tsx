@@ -66,7 +66,19 @@ export default function ShopPage() {
             className="flex items-center justify-center"
             style={{ position: "fixed", inset: 0, zIndex: 2, pointerEvents: "none" }}
           >
-            <p className="text-white text-xs" style={ts}>no item</p>
+            <p
+              style={{
+                ...mono,
+                color:         "#ffffff",
+                fontSize:      "clamp(1.8rem, 6vw, 3.2rem)",
+                fontWeight:    700,
+                letterSpacing: "0.05em",
+                // 背景写真がランダムなため、明るい写真でも読めるよう影を重ねる
+                textShadow:    "0 2px 18px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.7)",
+              }}
+            >
+              no item
+            </p>
           </div>
         )}
 
