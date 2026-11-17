@@ -36,7 +36,6 @@ const flashItems: {
   { id: "flash-95", src: "/images/works/flash/flash-95.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-96", src: "/images/works/flash/flash-96.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-97", src: "/images/works/flash/flash-97.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
-  { id: "flash-99", src: "/images/works/flash/flash-99.jpg", title: "無題",    price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-101", src: "/images/works/flash/flash-101.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-102", src: "/images/works/flash/flash-102.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
   { id: "flash-103", src: "/images/works/flash/flash-103.jpg", title: "無題",  price: 30000, size: "", availability: "available", priceId: DEPOSIT_PRICE_ID },
@@ -138,6 +137,7 @@ const archivedItems = [
   { id: "arch-98", src: "/images/works/flash/flash-98.jpg", title: "無題", price: 30000 },
   { id: "arch-100", src: "/images/works/flash/flash-100.jpg", title: "無題", price: 30000 },
   { id: "arch-84", src: "/images/works/flash/flash-84.jpg", title: "時空", price: 45000 },
+  { id: "arch-99", src: "/images/works/flash/flash-99.jpg", title: "無題", price: 30000 },
 ];
 
 type FlashItem = (typeof flashItems)[number];
