@@ -146,7 +146,6 @@ export default function FlashPage() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const [shuffled, setShuffled] = useState<FlashItem[]>(flashItems);
   const [showArchive, setShowArchive] = useState(false);
-  const [showTitles, setShowTitles] = useState(false);
 
   useEffect(() => {
     setShuffled([...flashItems].sort(() => Math.random() - 0.5));
@@ -156,10 +155,9 @@ export default function FlashPage() {
         sessionStorage.removeItem("archiveUnlocked");
         setShowArchive(true);
       }
-      // 裏コマンド②：booking→home→shop→home→flash でタイトル＋アーカイブ表示
+      // 裏コマンド②：booking→home→shop→home→flash でアーカイブ表示
       if (sessionStorage.getItem("titlesUnlocked") === "1") {
         sessionStorage.removeItem("titlesUnlocked");
-        setShowTitles(true);
         setShowArchive(true);
       }
     }
@@ -204,9 +202,6 @@ export default function FlashPage() {
               {/* Info */}
               <div className="flex flex-col gap-1" style={ts}>
                 <div className="flex flex-col gap-0.5">
-                  {showTitles && (
-                    <span className="text-white text-xs leading-snug">{item.title}</span>
-                  )}
                   <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
                     #{String(flashNumMap[item.id]).padStart(2, "0")}
                   </span>
@@ -243,9 +238,6 @@ export default function FlashPage() {
                     />
                   </button>
                   <div className="flex flex-col gap-0.5" style={ts}>
-                    {showTitles && (
-                      <span className="text-white text-xs leading-snug">{item.title}</span>
-                    )}
                     <span style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
                       A-{String(archivedItems.indexOf(item) + 1).padStart(2, "0")}
                     </span>
