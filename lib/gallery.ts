@@ -43,6 +43,19 @@ export const galleryImages = [
   // 以下2枚は幅1179px以下だが、指定により追加
   "/images/gallery/IMG_BG01.jpg",
   "/images/gallery/IMG_0011.jpg",
+  // 2026-11-24 追加
+  "/images/gallery/DSC00185.jpg",
+  "/images/gallery/IMG_0025.jpg",
+  "/images/gallery/IMG_0409.jpg",
+  "/images/gallery/IMG_1155.jpg",
+  "/images/gallery/IMG_1280.jpg",
+  "/images/gallery/IMG_4560.jpg",
+  "/images/gallery/IMG_8117.jpg",
+  "/images/gallery/IMG_8230.jpg",
+  "/images/gallery/IMG_8232.jpg",
+  "/images/gallery/IMG_8237.jpg",
+  "/images/gallery/IMG_8823.jpg",
+  "/images/gallery/IMG_9724.jpg",
 ];
 
 export function pickRandom(images: string[] = galleryImages): string {
