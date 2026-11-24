@@ -94,7 +94,8 @@ export default function Lightbox({ src, alt, onClose, title, price, medium, size
       ) : (
         /* ── 通常モード：画像のみ（どこをタップしても閉じる） ── */
         <div
-          style={{ width: "min(88vw, 88vh)", height: "min(88vw, 88vh)", position: "relative" }}
+          /* 縦横どの比率の画像でも、全体を欠けさせずに最大サイズで表示する */
+          style={{ width: "92vw", height: "88vh", position: "relative" }}
         >
           <Image
             src={src}

@@ -51,15 +51,15 @@ export default function DaysPage() {
               key={src}
               onClick={() => setLightbox(src)}
               className="relative w-full overflow-hidden bg-white/10 cursor-zoom-in block"
-              style={{ border: "none", padding: 0 }}
+              /* 全タイルを横長4:3で統一。はみ出す部分は切り取り、全体はクリックで確認できる */
+              style={{ border: "none", padding: 0, aspectRatio: "4 / 3" }}
             >
               <Image
                 src={src}
                 alt=""
-                width={0}
-                height={0}
+                fill
                 sizes="(max-width: 768px) 40vw, 28vw"
-                className="w-full h-auto transition-opacity duration-300 hover:opacity-80"
+                className="object-cover transition-opacity duration-300 hover:opacity-80"
               />
             </button>
           ))}
