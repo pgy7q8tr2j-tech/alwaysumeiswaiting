@@ -10,7 +10,6 @@ const daysOnlyPhotos: string[] = [
   "/images/days/54FA3C0F-ACAF-4059-94CB-AAD7F2D62956.jpg",
   "/images/days/9F93A0B4-AE13-4748-9EA5-1AF230AE2B49.jpg",
   "/images/days/IMG_5281.jpg",
-  "/images/days/IMG_5288.jpg",
   "/images/days/IMG_6267.jpg",
   "/images/days/IMG_7678.jpg",
 ];

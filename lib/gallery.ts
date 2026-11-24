@@ -22,7 +22,6 @@ export const galleryImages = [
   "/images/gallery/IMG_6965.jpg",
   "/images/gallery/IMG_7053.jpg",
   "/images/gallery/IMG_7696.jpg",
-  "/images/gallery/IMG_8116.jpg",
   "/images/gallery/IMG_8147.jpg",
   "/images/gallery/IMG_8231.jpg",
   "/images/gallery/IMG_8236.jpg",
