@@ -6,13 +6,14 @@ import { useState, useEffect } from "react";
 import { pickRandom } from "@/lib/gallery";
 
 const navLinks = [
-  { href: "/flash",   label: "flash",   zone: { tMin: 10, tMax: 32, lMin: 5,  lMax: 60 } },
-  { href: "/shop",    label: "shop",    zone: { tMin: 38, tMax: 60, lMin: 18, lMax: 65 } },
-  { href: "/booking", label: "booking", zone: { tMin: 66, tMax: 84, lMin: 8,  lMax: 58 } },
+  { href: "/flash",   label: "flash",   zone: { tMin: 8,  tMax: 24, lMin: 5,  lMax: 60 } },
+  { href: "/shop",    label: "shop",    zone: { tMin: 30, tMax: 46, lMin: 18, lMax: 65 } },
+  { href: "/booking", label: "booking", zone: { tMin: 52, tMax: 68, lMin: 8,  lMax: 58 } },
+  { href: "/days",    label: "days",    zone: { tMin: 74, tMax: 88, lMin: 22, lMax: 62 } },
 ];
 
-// 3色を必ずシャッフルして重複なしで割り当て
-const DOT_COLORS = ["#ff4444", "#4488ff", "#44cc77"];
+// 4色を必ずシャッフルして重複なしで割り当て
+const DOT_COLORS = ["#ff4444", "#4488ff", "#44cc77", "#ffcc33"];
 function shuffleColors(): string[] {
   return [...DOT_COLORS].sort(() => Math.random() - 0.5);
 }
