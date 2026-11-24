@@ -8,7 +8,6 @@ import HomeButton from "@/components/HomeButton";
 import { daysPhotos } from "@/lib/days";
 
 const mono = { fontFamily: "'Courier New', Courier, monospace" };
-const ts   = { ...mono, textShadow: "0 1px 6px rgba(0,0,0,0.7)" };
 
 export default function DaysPage() {
   const [lightbox, setLightbox] = useState<string | null>(null);
@@ -23,10 +22,6 @@ export default function DaysPage() {
     <PhotoBackground overlay={45}>
       <HomeButton />
       <div className="min-h-screen px-14 pt-20 pb-28 md:px-20 lg:px-28">
-
-        <p className="text-white text-xs leading-loose mb-14" style={ts}>
-          photographs from everyday life.
-        </p>
 
         {/* 写真が無いとき：画面中央に no photo */}
         {photos.length === 0 && (
